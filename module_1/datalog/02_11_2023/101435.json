@@ -1,0 +1,9 @@
+{
+    "query": "select name from city where id IN (select id from region where holder = 11 AND 15)",
+    "resultcount": 1,
+    "result": [
+        {
+            "name": "Onker"
+        }
+    ]
+}

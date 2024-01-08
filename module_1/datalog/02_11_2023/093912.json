@@ -1,0 +1,9 @@
+{
+    "query": "select count(*) from city where region = 5",
+    "resultcount": 1,
+    "result": [
+        {
+            "count(*)": 7
+        }
+    ]
+}

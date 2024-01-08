@@ -1,0 +1,14 @@
+{
+    "query": "SELECT type , id FROM animal WHERE owner IN \n(SELECT id FROM person WHERE id = 2)\n\n",
+    "resultcount": 2,
+    "result": [
+        {
+            "type": "Sheep",
+            "id": 7
+        },
+        {
+            "type": "Sea Snake",
+            "id": 83
+        }
+    ]
+}

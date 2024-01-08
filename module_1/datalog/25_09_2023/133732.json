@@ -1,0 +1,18 @@
+{
+    "query": "select * from teachers where id = 3",
+    "resultcount": 1,
+    "result": [
+        {
+            "id": 3,
+            "firstName": "Jeroen",
+            "lastName": "Slemmer",
+            "infix": null,
+            "code": "SLR",
+            "phone": "0652456626",
+            "email": "jslemmer@davinci.nl",
+            "primaryCourse": 2,
+            "secondaryCourse": 5,
+            "primaryLocation": "LPP"
+        }
+    ]
+}

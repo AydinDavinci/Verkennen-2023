@@ -1,0 +1,12 @@
+{
+    "query": "SELECT name \nFROM region\nWHERE id IN (SELECT id FROM city WHERE id IN (3, 4));",
+    "resultcount": 2,
+    "result": [
+        {
+            "name": "South Groval"
+        },
+        {
+            "name": "North Groval"
+        }
+    ]
+}

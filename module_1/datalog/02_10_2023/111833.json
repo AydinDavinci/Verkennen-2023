@@ -1,0 +1,9 @@
+{
+    "query": "select count(*) from npc",
+    "resultcount": 1,
+    "result": [
+        {
+            "count(*)": 194
+        }
+    ]
+}

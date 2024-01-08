@@ -1,0 +1,10 @@
+{
+    "query": "select avg(price), avg(attack) from weapon where '% sword'",
+    "resultcount": 1,
+    "result": [
+        {
+            "avg(price)": null,
+            "avg(attack)": null
+        }
+    ]
+}

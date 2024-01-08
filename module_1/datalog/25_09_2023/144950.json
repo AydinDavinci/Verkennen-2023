@@ -1,0 +1,11 @@
+{
+    "query": "select * from region where id = 1",
+    "resultcount": 1,
+    "result": [
+        {
+            "id": 1,
+            "name": "Gursoy Island",
+            "holder": 14
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "query": "select * from animal where animal.owner in ('Captain America')",
+    "resultcount": 0,
+    "result": []
+}

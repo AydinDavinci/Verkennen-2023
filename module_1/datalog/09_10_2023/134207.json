@@ -1,0 +1,36 @@
+{
+    "query": "select * from city  where region = 4",
+    "resultcount": 6,
+    "result": [
+        {
+            "id": 1,
+            "name": "Knael",
+            "region": 4
+        },
+        {
+            "id": 2,
+            "name": "Troy",
+            "region": 4
+        },
+        {
+            "id": 3,
+            "name": "Pacifa",
+            "region": 4
+        },
+        {
+            "id": 4,
+            "name": "Onker",
+            "region": 4
+        },
+        {
+            "id": 5,
+            "name": "Quiro",
+            "region": 4
+        },
+        {
+            "id": 6,
+            "name": "Antsor",
+            "region": 4
+        }
+    ]
+}

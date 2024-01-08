@@ -1,0 +1,5 @@
+{
+    "query": "select * from animal where owner in \n(select animal.owner from animal where owner = ('captain america'))",
+    "resultcount": 0,
+    "result": []
+}

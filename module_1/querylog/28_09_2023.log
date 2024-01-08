@@ -1,0 +1,52 @@
+select * from courses where has_exame = 1; #09:40:03@dvc-sd.db
+select * from courses where has_exame = 1 and is_avo = 1; #09:40:12@dvc-sd.db
+select * from courses where has_exame = 1 and is_avo = 1; #09:41:08@dvc-sd.db
+select * from courses where has_exame = 1
+; #09:41:22@dvc-sd.db
+select * from courses where has_exame = 1 and is_avo = 0; #09:41:46@dvc-sd.db
+select * from creature; #09:56:28@rubyquest.db
+select * from creature where name = ("Killer Bee , Orc"); #09:57:03@rubyquest.db
+select * from creature where name = ("Killer Bee , Orc"); #09:57:17@rubyquest.db
+select * from creature where name in ("Killer Bee , Orc"); #09:57:39@rubyquest.db
+select * from creature where name in ("Killer Bee" , "Orc"); #09:57:57@rubyquest.db
+select * from animal ; #10:00:10@rubyquest.db
+select * from animal where speed = 6 and defense = 5; #10:00:30@rubyquest.db
+select count(*) from animal; #10:03:12@rubyquest.db
+select * from animal; #10:03:18@rubyquest.db
+select count(*) from animal  where type in ("Wolf" , "Bear" , "Eagle"); #10:03:34@rubyquest.db
+select * from animal; #10:04:21@rubyquest.db
+select * from animal ; #10:05:28@rubyquest.db
+select * from animal where type = 'Tiger' order by speed ASC; #10:06:44@rubyquest.db
+select * from person; #10:07:54@rubyquest.db
+select * from person where attack = 10 and defense = 10 and agility = 10; #10:08:35@rubyquest.db
+select * from hero; #10:11:52@rubyquest.db
+select * from hero where not intelligence = 30 or 90; #10:12:21@rubyquest.db
+select * from hero where not intelligence = 30 or 90; #10:12:23@rubyquest.db
+select * from hero where not intelligence = 30 or 9; #10:12:27@rubyquest.db
+select * from hero where not intelligence = 30 or 90; #10:12:32@rubyquest.db
+select * from hero where not intelligence = 30 or 9; #10:12:35@rubyquest.db
+select * from hero where not intelligence = 30 or 90; #10:12:39@rubyquest.db
+select * from hero where intelligence = 30 or 90; #10:12:46@rubyquest.db
+select * from hero where intelligence = 30 or 90; #10:12:47@rubyquest.db
+select * from hero where intelligence ; #10:13:02@rubyquest.db
+select * from hero where intelligence ; #10:13:03@rubyquest.db
+select * from hero where intelligence ; #10:13:03@rubyquest.db
+select * from hero where intelligence ; #10:13:04@rubyquest.db
+select * from hero where intelligence ; #10:13:04@rubyquest.db
+select * from hero where intelligence ; #10:13:04@rubyquest.db
+select * from hero ; #10:13:21@rubyquest.db
+select * from hero where not intelligence = 30 or 90; #10:13:38@rubyquest.db
+select * from hero where not intelligence = 30 or 90; #10:13:39@rubyquest.db
+select * from hero where intelligence = 30 or 90; #10:13:47@rubyquest.db
+select * from hero where intelligence = 30 or 90; #10:13:48@rubyquest.db
+select * from hero where not intelligence = 30 or 90; #10:13:51@rubyquest.db
+select * from weapon ; #10:16:00@rubyquest.db
+select * from weapon where price = 100 - 1000; #10:16:09@rubyquest.db
+select * from weapon where price >= 100 AND price <= 1000; #10:17:16@rubyquest.db
+select * from person; #10:22:12@rubyquest.db
+select * from person where name like 'B%'; #10:25:56@rubyquest.db
+select * from person where name like 'a'; #10:27:36@rubyquest.db
+select * from person where name like 'A'; #10:27:42@rubyquest.db
+select * from person where name like '%A%'; #10:27:46@rubyquest.db
+select * from person where name like '%E%A%'; #10:28:45@rubyquest.db
+select * from person where name like '%d'; #10:29:43@rubyquest.db

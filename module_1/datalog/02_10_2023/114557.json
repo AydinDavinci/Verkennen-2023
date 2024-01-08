@@ -1,0 +1,9 @@
+{
+    "query": "select count(gold) from quest where holder = 0",
+    "resultcount": 1,
+    "result": [
+        {
+            "count(gold)": 71
+        }
+    ]
+}

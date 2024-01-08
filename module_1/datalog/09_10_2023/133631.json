@@ -1,0 +1,5 @@
+{
+    "query": "select * from region where name = '%groval'",
+    "resultcount": 0,
+    "result": []
+}

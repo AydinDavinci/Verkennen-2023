@@ -1,0 +1,55 @@
+select * from teachers; #13:33:28@dvc-sd.db
+select lastname from teachers; #13:35:06@dvc-sd.db
+select lastname, firstname from teachers; #13:35:16@dvc-sd.db
+select * from teachers; #13:37:01@dvc-sd.db
+select * from teachers where id = 3; #13:37:32@dvc-sd.db
+select * from teachers where code = 'RVP'; #13:38:01@dvc-sd.db
+select * from teachers where id = 3; #13:38:50@dvc-sd.db
+select firstname from teachers where id =  3; #13:39:04@dvc-sd.db
+select firstname from teachers where id =  3; #13:39:39@dvc-sd.db
+select firstname from teachers where id > 3
+; #13:40:38@dvc-sd.db
+select * from hero; #13:46:01@rubyquest.db
+select * from hero; #13:46:26@rubyquest.db
+select * from person; #13:47:38@rubyquest.db
+select * from person; #13:48:00@rubyquest.db
+select * from hero; #13:52:34@rubyquest.db
+select * from person; #13:53:18@rubyquest.db
+select * from quest; #13:54:01@rubyquest.db
+select * from creature; #13:54:29@rubyquest.db
+select name from armor; #13:54:56@rubyquest.db
+select name, attack from weapon; #13:55:18@rubyquest.db
+select name, health from creature; #13:55:40@rubyquest.db
+select * from person where id = 7; #14:47:33@rubyquest.db
+select * from quest; #14:48:13@rubyquest.db
+select * from region; #14:49:00@rubyquest.db
+select * from region; #14:49:12@rubyquest.db
+select * from region; #14:49:12@rubyquest.db
+select * from region; #14:49:12@rubyquest.db
+select * from region; #14:49:13@rubyquest.db
+select * from region; #14:49:13@rubyquest.db
+select * from region; #14:49:14@rubyquest.db
+select * from region; #14:49:14@rubyquest.db
+select * from region; #14:49:14@rubyquest.db
+select * from region; #14:49:14@rubyquest.db
+select * from region; #14:49:14@rubyquest.db
+select * from region; #14:49:18@rubyquest.db
+select * from region; #14:49:18@rubyquest.db
+select * from region; #14:49:18@rubyquest.db
+select * from region; #14:49:19@rubyquest.db
+select * from region; #14:49:19@rubyquest.db
+select * from region; #14:49:19@rubyquest.db
+select * from region; #14:49:20@rubyquest.db
+select * from region; #14:49:20@rubyquest.db
+select * from region; #14:49:35@rubyquest.db
+select * from region where id = 1; #14:49:50@rubyquest.db
+select * from animal; #14:50:12@rubyquest.db
+select * from animal; #14:50:33@rubyquest.db
+select * from animal where speed = 3; #14:50:46@rubyquest.db
+select * from animal ; #14:51:52@rubyquest.db
+select * from animal where owner > 0; #14:52:14@rubyquest.db
+select * from person where id = 7; #14:53:12@rubyquest.db
+select * from quest where gold = 0; #14:54:01@rubyquest.db
+select * from region where id = 1; #14:54:30@rubyquest.db
+select * from animal where speed = 3; #14:54:55@rubyquest.db
+select * from animal where owner > 0; #14:55:19@rubyquest.db

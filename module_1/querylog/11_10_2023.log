@@ -1,0 +1,19 @@
+create table product (
+id INTEGER PRIMARY KEY,
+naam varchar(25),
+soort integer,
+prijs real,
+prijs_10_real,
+allergenen varchar(50)
+); #09:50:44@oliebollen.db
+select * from product; #09:51:11@oliebollen.db
+select * from product; #09:56:15@oliebollen.db
+INSERT INTO product (id, naam, soort, prijs, prijs_10_real, allergenen)
+values (1, 'Oliebollen', 2, 1.5, 13.0, 'Gluten , Eggs'); #09:56:26@oliebollen.db
+select * from product; #09:56:33@oliebollen.db
+ALTER TABLE product
+RENAME COLUMN prijs_10_real TO prijs_10;; #10:03:24@oliebollen.db
+select * from product; #10:03:32@oliebollen.db
+INSERT INTO product (id, naam, soort, prijs, prijs_10, allergenen)
+VALUES (2, 'Appelflap', 'Dessert', 2.99, 15, 'Gluten, Eggs');; #10:17:04@oliebollen.db
+select * from product; #10:17:13@oliebollen.db

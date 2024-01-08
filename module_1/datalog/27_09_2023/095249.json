@@ -1,0 +1,9 @@
+{
+    "query": "SELECT count(5) from weapon ",
+    "resultcount": 1,
+    "result": [
+        {
+            "count(5)": 52
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "query": "select * from courses where has_exame = 1 and is_avo = 0",
+    "resultcount": 3,
+    "result": [
+        {
+            "id": 2,
+            "name": "Programmeren",
+            "code": "PROG",
+            "has_exame": 1,
+            "is_avo": 0
+        },
+        {
+            "id": 4,
+            "name": "Skills",
+            "code": "SKILLS",
+            "has_exame": 1,
+            "is_avo": 0
+        },
+        {
+            "id": 11,
+            "name": "Keuzedeel",
+            "code": "KEUZE",
+            "has_exame": 1,
+            "is_avo": 0
+        }
+    ]
+}

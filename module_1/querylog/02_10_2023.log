@@ -1,0 +1,38 @@
+select max(id) from courses; #10:59:13@dvc-sd.db
+select avg(id) from courses; #10:59:36@dvc-sd.db
+select min(id) from courses where id in (6, 7); #11:05:19@dvc-sd.db
+select count(*) from npc; #11:18:33@rubyquest.db
+select count(*) from animal
+; #11:19:58@rubyquest.db
+select count(*) from animal
+; #11:20:22@rubyquest.db
+select count(*) from city
+; #11:20:57@rubyquest.db
+select count(*) from animal where type = 'Sheep'; #11:21:31@rubyquest.db
+select count(*) from animal where type = 'Sheep'; #11:21:32@rubyquest.db
+select count(*) from animal where type = 'Sheep'; #11:21:33@rubyquest.db
+select count(*) from animal where type = 'Sheep'; #11:21:33@rubyquest.db
+select count(*) from animal where type = 'Sheep'; #11:21:33@rubyquest.db
+select count(*) from animal where type = 'Sea Snake'; #11:22:32@rubyquest.db
+select * from animal; #11:26:24@rubyquest.db
+select min(speed) from animal; #11:38:04@rubyquest.db
+select min(speed) from animal; #11:38:17@rubyquest.db
+select max(speed) from animal; #11:40:16@rubyquest.db
+select min(attack) from weapon; #11:40:45@rubyquest.db
+select max(price) from weapon; #11:42:20@rubyquest.db
+select avg(experience) from quest; #11:44:24@rubyquest.db
+select count(gold) from quest where holder = 0; #11:45:57@rubyquest.db
+select avg(price), avg(attack) from weapon where '%sword'; #11:49:41@rubyquest.db
+select avg(price), avg(attack) from weapon where '% sword'; #11:49:48@rubyquest.db
+select avg(price), avg(attack) from weapon where name like '%sword'; #11:50:26@rubyquest.db
+select avg(price), avg(attack) from weapon where name like '%sword%'; #11:50:46@rubyquest.db
+select max(speed) , count (*) from animal; #12:02:08@rubyquest.db
+select max(speed) , count(*) from animal; #12:03:20@rubyquest.db
+select max(speed) , count(speed) from animal; #12:03:45@rubyquest.db
+select max(speed) , count(speed) from animal; #12:03:46@rubyquest.db
+select max(speed) , count(speed) from animal; #12:03:46@rubyquest.db
+select max(speed) , count(speed) from animal; #12:03:46@rubyquest.db
+select max(speed) , count(speed) from animal; #12:03:47@rubyquest.db
+select max(speed) , count(speed) from animal; #12:03:47@rubyquest.db
+select max(speed) , count(speed) from animal; #12:03:47@rubyquest.db
+select max(speed) , count(speed) from animal; #12:03:47@rubyquest.db

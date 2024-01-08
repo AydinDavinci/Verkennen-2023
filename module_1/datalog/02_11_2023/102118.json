@@ -1,0 +1,5 @@
+{
+    "query": "SELECT name \nFROM city\nWHERE id IN (SELECT name FROM region WHERE id IN (3, 4));",
+    "resultcount": 0,
+    "result": []
+}

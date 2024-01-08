@@ -1,0 +1,41 @@
+html {
+    background-color: black;
+}
+
+#header-title {
+    color: greenyellow;
+    font-family: arial;
+}
+
+.thick-blue {
+    color: blue;
+    font-family: arial;
+    font-weight: bold;
+}
+
+.cursive-yllw {
+    color: yellow;
+    font-family: arial;
+    font-style: italic;
+}
+
+.title-orange {
+    color: orange;
+    font-family: arial;
+}
+
+.mono-red {
+    color: red;
+    font-family: monospace;
+}
+
+#uniek1 {
+    color: yellow;
+    background-color: red;
+    font-family: arial;
+    font-style: italic;
+}
+
+#uniek2 {
+    text-decoration-line: underline;
+}

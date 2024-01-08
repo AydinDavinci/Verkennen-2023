@@ -1,0 +1,32 @@
+body{
+height: 2000px;
+font-family: arial;
+animation: colorchange 5s infinite;
+}
+
+#box-1 {
+    background-color: orange;
+    text-align: center; 
+    margin: 50px;
+    padding: 2%;
+    font-size: 30px;
+    border-color: blue;
+    border-width: 4px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+
+#box-2 {
+    background-color: purple;
+    padding-bottom: 10%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+    font-size: 50px;
+}
+
+@keyframes colorchange {
+    from {background-color: red;}
+    to {background-color: blue;}
+    }

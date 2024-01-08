@@ -1,0 +1,80 @@
+select animal.* , person.name , person.sex from animal 
+join person on person.id = animal.owner; #13:28:42@rubyquest.db
+select animal.* , person.name , person.sex from animal 
+join person on person.id = animal.owner; #13:29:58@rubyquest.db
+select * from city; #13:33:43@rubyquest.db
+select * from region; #13:35:16@rubyquest.db
+select * from region where name = '%groval'; #13:36:31@rubyquest.db
+select * from region; #13:40:14@rubyquest.db
+select * from city  where region = 4; #13:42:07@rubyquest.db
+select * from city  where region in 
+(select region.id from region where name in ('south Groval' , 'North groval')); #13:43:48@rubyquest.db
+select * from city where region in 
+(select region.id from region where name in ('south Groval' , 'North groval')); #13:43:59@rubyquest.db
+select * from region; #13:44:30@rubyquest.db
+select id , name from city where region in 
+(select region.id from region where name in ('south Groval' , 'North groval')); #13:44:38@rubyquest.db
+select id , name from city where region in 
+(select region.id from region where name in ('South Groval' , 'North Groval')); #13:46:15@rubyquest.db
+select * from city where region in 
+(select region.id from region where name in ('South Groval' , 'North Groval')); #13:46:27@rubyquest.db
+select * from animal; #13:50:36@rubyquest.db
+select * from animal where type in 
+(select animal.owner from animal where owner  in ('Captain America')); #13:51:29@rubyquest.db
+select * from animal where type in 
+(select animal.owner from animal where owner  in ('captain america')); #13:51:45@rubyquest.db
+select * from animal where type in 
+(select animal.owner from animal where owner  in ('captian america')); #13:52:14@rubyquest.db
+select * from animal; #13:52:42@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner  in ('captian america')); #13:53:22@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner in ('captain america')); #13:54:25@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner in ('captain america')); #13:54:25@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner in ('captain america')); #13:54:26@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner in ('captain america')); #13:54:26@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner in ('captain america')); #13:54:26@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner in ('captain america')); #13:55:02@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = ('captain america')); #13:55:10@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner == ('captain america')); #13:55:14@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'captain america'); #13:55:21@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'captain america'); #13:55:21@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'captain america'); #13:55:22@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'captain america'); #13:55:22@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'Captain America'); #13:55:26@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'Captain America'); #13:56:20@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'Captain_
+America') ; #14:06:32@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'Captain_America') ; #14:06:35@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'Captain_America') ; #14:06:36@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'Captain_America') ; #14:06:36@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'Captain_America') ; #14:06:36@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'Captain_America') ; #14:06:36@rubyquest.db
+select * from animal where owner in 
+(select animal.owner from animal where owner = 'captainamerica') ; #14:06:46@rubyquest.db
+select * from animal where animal.owner in ('captain america'); #14:09:19@rubyquest.db
+select * from animal where animal.owner in ('captain america'); #14:09:19@rubyquest.db
+select * from animal where animal.owner in ('captain america'); #14:09:19@rubyquest.db
+select * from animal where animal.owner in ('captain america'); #14:09:20@rubyquest.db
+select * from animal where animal.owner in ('captain america'); #14:09:20@rubyquest.db
+select count(*) from animal where animal.owner in ('Captain America'); #14:10:48@rubyquest.db
+select * from animal where animal.owner in ('Captain America'); #14:11:10@rubyquest.db

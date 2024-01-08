@@ -1,0 +1,144 @@
+select * from region; #09:37:22@rubyquest.db
+select * from region ; #09:37:54@rubyquest.db
+select * from city; #09:38:15@rubyquest.db
+select * from city where region = 5; #09:38:27@rubyquest.db
+select * from region; #09:38:45@rubyquest.db
+select * from city where region = 5; #09:38:53@rubyquest.db
+select count(*) from city where region = 5; #09:39:12@rubyquest.db
+select * from creature; #09:40:45@rubyquest.db
+select * from hero; #09:41:06@rubyquest.db
+select * from npc; #09:41:21@rubyquest.db
+select * from person; #09:41:40@rubyquest.db
+select * from weapon; #09:42:42@rubyquest.db
+select * from person; #09:43:06@rubyquest.db
+select * from city; #09:52:31@rubyquest.db
+select * from city where region =  (select name from region where id = 4);; #09:55:15@rubyquest.db
+select * from city where region IN  (select name from region where id = 4);; #09:56:07@rubyquest.db
+select name from region; #09:57:24@rubyquest.db
+select name from region where id = 4; #09:57:37@rubyquest.db
+select name from region where id IN (select name from city where region = 4); #09:58:23@rubyquest.db
+select name from region where id IN (select name from city where region = 4); #09:58:24@rubyquest.db
+select name from region where id IN (select name from city where region = 4); #09:58:24@rubyquest.db
+select name from region where id IN (select name from city where region = 4); #09:58:24@rubyquest.db
+select * from city where id IN (select id from region where id = 4); #10:04:06@rubyquest.db
+select name from city where id IN (select id from region where id = 4); #10:04:50@rubyquest.db
+select name from city where id IN (select name from region where id = 4); #10:04:59@rubyquest.db
+select name from city where id IN (select id from region where id = 4); #10:05:03@rubyquest.db
+select * from city; #10:05:15@rubyquest.db
+select name from city where id IN (select id from region where region = 4); #10:05:30@rubyquest.db
+select name from city where id IN (select id from region where region = 4 AND 5); #10:05:41@rubyquest.db
+select * from city; #10:05:56@rubyquest.db
+select name from city where id IN (select id from region where region = 4 AND 5); #10:06:18@rubyquest.db
+select name from city where id IN (select id from region where region = 4); #10:08:16@rubyquest.db
+select name from city where id IN (select id from region where region = 4 or 5); #10:09:55@rubyquest.db
+select name from city where id IN (select id from region where region in (4 , 5)); #10:10:41@rubyquest.db
+select name from city where id IN (select id from region where region = 4 AND 5); #10:10:59@rubyquest.db
+select name from city where id IN (select id from region where region = 4 AND 5); #10:11:00@rubyquest.db
+select name from city where id IN (select id from region where region = 4 AND 5); #10:11:00@rubyquest.db
+select * from region; #10:11:11@rubyquest.db
+select name from city where id IN (select id from region where region = 3 AND 4); #10:11:24@rubyquest.db
+select name from city where id IN (select id from region where region IN  (3 , 4)); #10:11:44@rubyquest.db
+select name from city where id IN (select id from region where region = 4); #10:12:16@rubyquest.db
+select name from city where id IN (select id from region where region = 4); #10:12:17@rubyquest.db
+select name from city where id IN (select id from region where region = 4); #10:12:17@rubyquest.db
+select name from city where id IN (select id from region where region = 4 and 3); #10:12:26@rubyquest.db
+select * from region ; #10:13:04@rubyquest.db
+select name from city where id IN (select id from region where holder = 11 AND 15); #10:14:35@rubyquest.db
+select name from city where id IN (select id from region where id = 3 and 4); #10:14:45@rubyquest.db
+select name from city where id IN (select name from region where id = 3 and 4); #10:15:08@rubyquest.db
+select name from city where id IN (select id from region where region = 4 AND 5); #10:15:18@rubyquest.db
+select name from city where id IN (select id from region where id = 4 AND 5); #10:15:25@rubyquest.db
+select name from city where id IN (select id from region where region = 4 AND 5); #10:16:17@rubyquest.db
+SELECT name FROM city WHERE id IN (SELECT id FROM region WHERE region = 4 OR region = 5);
+; #10:17:05@rubyquest.db
+SELECT name FROM city WHERE id IN (SELECT id FROM region WHERE region = 4 OR region = 5);
+; #10:17:05@rubyquest.db
+SELECT name FROM city WHERE id IN (SELECT id FROM region WHERE region = 4 OR region = 5);
+; #10:17:06@rubyquest.db
+SELECT name FROM city WHERE id IN (SELECT id FROM region WHERE region = 4 OR region = 5);
+; #10:17:06@rubyquest.db
+SELECT name FROM city WHERE id IN (SELECT id FROM region WHERE region = 4 OR region = 5);
+; #10:17:06@rubyquest.db
+SELECT name FROM city WHERE id IN (SELECT id FROM region WHERE region = 4 OR region = 5);
+; #10:17:06@rubyquest.db
+SELECT name FROM city WHERE id IN (SELECT id FROM region WHERE id = 4 OR id = 5);
+; #10:17:29@rubyquest.db
+SELECT name FROM city WHERE id IN (SELECT id FROM region WHERE id = 4 OR id = 5);
+; #10:17:30@rubyquest.db
+SELECT name 
+FROM city 
+WHERE id IN (SELECT id FROM region WHERE region IN (3, 4));
+
+; #10:18:54@rubyquest.db
+SELECT name 
+FROM city 
+WHERE id IN (SELECT id FROM region WHERE id IN (3, 4));
+
+; #10:19:37@rubyquest.db
+SELECT name 
+FROM city 
+WHERE id IN (SELECT id FROM region WHERE region IN (3, 4));
+
+; #10:19:44@rubyquest.db
+select * from city
+; #10:20:01@rubyquest.db
+SELECT name 
+FROM city 
+WHERE id IN (SELECT id FROM region WHERE region IN (3, 4, 5));; #10:20:27@rubyquest.db
+SELECT name 
+FROM region
+WHERE id IN (SELECT id FROM city WHERE id IN (3, 4));; #10:20:53@rubyquest.db
+SELECT name 
+FROM city
+WHERE id IN (SELECT name FROM region WHERE id IN (3, 4));; #10:21:18@rubyquest.db
+SELECT name 
+FROM city
+WHERE id IN (SELECT id FROM region WHERE id IN (3, 4));; #10:21:26@rubyquest.db
+SELECT name 
+FROM city
+WHERE id IN (SELECT name FROM region WHERE id IN (3, 4));; #10:21:29@rubyquest.db
+SELECT name 
+FROM city
+WHERE id IN (SELECT region FROM region WHERE id IN (3, 4));; #10:21:34@rubyquest.db
+SELECT name 
+FROM city
+WHERE id IN (SELECT id FROM region WHERE name IN (3, 4));; #10:21:55@rubyquest.db
+SELECT name 
+FROM city
+WHERE id IN (SELECT id FROM region WHERE id IN (3, 4));; #10:22:00@rubyquest.db
+select * from city; #10:22:10@rubyquest.db
+SELECT name 
+FROM city 
+WHERE id IN (SELECT region FROM region WHERE region IN (3, 4, 5));
+; #10:22:46@rubyquest.db
+SELECT name 
+FROM city
+WHERE region IN (SELECT id FROM region WHERE region IN (3, 4, 5));
+; #10:23:22@rubyquest.db
+SELECT name 
+FROM city
+WHERE region IN (SELECT id FROM region WHERE region IN (3, 4));
+; #10:23:27@rubyquest.db
+SELECT name FROM city WHERE region IN 
+(SELECT id FROM region WHERE region IN (3, 4))
+; #10:23:58@rubyquest.db
+select * from animal
+; #10:26:08@rubyquest.db
+select * from person
+; #10:26:23@rubyquest.db
+SELECT type FROM animal WHERE owner IN 
+(SELECT id FROM person WHERE id = 2)
+
+; #10:27:38@rubyquest.db
+SELECT type and id FROM animal WHERE owner IN 
+(SELECT id FROM person WHERE id = 2)
+
+; #10:28:01@rubyquest.db
+SELECT type , id FROM animal WHERE owner IN 
+(SELECT id FROM person WHERE id = 2)
+
+; #10:28:08@rubyquest.db
+select * from animal
+; #10:30:14@rubyquest.db
+select * from person
+; #10:30:34@rubyquest.db

@@ -1,0 +1,82 @@
+
+
+html {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%
+
+}
+
+h1 {
+background-color: rgb(255, 255, 255);
+color: black;
+
+}
+
+h2 {
+    margin-bottom: 2px;
+    color:green;
+}
+
+h3 {
+
+color: yellow;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #25ddfe;
+    color: white;
+    font-size: 30px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 12px;
+    margin-top: 10px;
+    border-color: red;
+}
+
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #25ddfe;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+section{
+    padding: 50px;
+}
+
+h3 > p{
+    margin-bottom: 5px;
+}
+
+nav {
+margin-top: 15px;
+text-align: center;
+}
+
+nav a {
+    font-size: larger;
+    color: white;
+    margin-right: 2%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+nav a:hover {
+    color: red; 
+}
+
+#bggeek {
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
+}
+
+#bggeek:hover {
+    color: yellow;
+}

@@ -1,0 +1,16 @@
+body {
+    background: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div , p, li {
+color:white;
+background: greenyellow;
+animation: colorchange 5s infinite;
+}
+
+@keyframes colorchange {
+100% {background-color: red;}
+}
+

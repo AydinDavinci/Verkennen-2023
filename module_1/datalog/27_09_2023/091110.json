@@ -1,0 +1,9 @@
+{
+    "query": "SELECT code from teachers where  id = 1",
+    "resultcount": 1,
+    "result": [
+        {
+            "code": "RVP"
+        }
+    ]
+}

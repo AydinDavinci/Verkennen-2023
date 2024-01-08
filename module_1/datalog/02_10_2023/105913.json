@@ -1,0 +1,9 @@
+{
+    "query": "select max(id) from courses",
+    "resultcount": 1,
+    "result": [
+        {
+            "max(id)": 11
+        }
+    ]
+}

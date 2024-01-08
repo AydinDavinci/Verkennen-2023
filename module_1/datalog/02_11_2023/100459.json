@@ -1,0 +1,5 @@
+{
+    "query": "select name from city where id IN (select name from region where id = 4)",
+    "resultcount": 0,
+    "result": []
+}

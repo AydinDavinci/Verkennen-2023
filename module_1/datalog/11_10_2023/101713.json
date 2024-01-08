@@ -1,0 +1,22 @@
+{
+    "query": "select * from product",
+    "resultcount": 2,
+    "result": [
+        {
+            "id": 1,
+            "naam": "Oliebollen",
+            "soort": 2,
+            "prijs": 1.5,
+            "prijs_10": 13.0,
+            "allergenen": "Gluten , Eggs"
+        },
+        {
+            "id": 2,
+            "naam": "Appelflap",
+            "soort": "Dessert",
+            "prijs": 2.99,
+            "prijs_10": 15,
+            "allergenen": "Gluten, Eggs"
+        }
+    ]
+}

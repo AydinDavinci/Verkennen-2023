@@ -1,0 +1,10 @@
+{
+    "query": "select avg(price), avg(attack) from weapon where name like '%sword%'",
+    "resultcount": 1,
+    "result": [
+        {
+            "avg(price)": 884.0,
+            "avg(attack)": 1949.0
+        }
+    ]
+}

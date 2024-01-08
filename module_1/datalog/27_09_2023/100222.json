@@ -1,0 +1,5 @@
+{
+    "query": "SELECT * from animal where type > null limit 1",
+    "resultcount": 0,
+    "result": []
+}

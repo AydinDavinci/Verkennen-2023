@@ -1,0 +1,9 @@
+{
+    "query": "select firstname from teachers where id =  3",
+    "resultcount": 1,
+    "result": [
+        {
+            "firstName": "Jeroen"
+        }
+    ]
+}

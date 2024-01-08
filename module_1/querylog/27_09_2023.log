@@ -1,0 +1,73 @@
+SELECT * from animal; #09:07:35@rubyquest.db
+SELECT * from teachers; #09:08:59@dvc-sd.db
+SELECT * from teachers where  id = 1; #09:10:51@dvc-sd.db
+SELECT code from teachers where  id = 1; #09:11:10@dvc-sd.db
+SELECT * from teachers where  id = 1; #09:11:15@dvc-sd.db
+SELECT * from teachers where not id = 1; #09:12:01@dvc-sd.db
+SELECT * from teachers where not id = 2; #09:12:46@dvc-sd.db
+SELECT * from quest ; #09:15:09@rubyquest.db
+SELECT * from quest where experience > 3000; #09:18:44@rubyquest.db
+SELECT * from person where gold > 1800; #09:21:16@rubyquest.db
+SELECT * from person where gold < 1850; #09:23:36@rubyquest.db
+SELECT * from person where gold >= 1300; #09:25:12@rubyquest.db
+SELECT * from person where gold >= 1300; #09:25:32@rubyquest.db
+SELECT * from weapon ; #09:26:21@rubyquest.db
+SELECT * from weapon where price < 300; #09:26:31@rubyquest.db
+SELECT * from quest ; #09:27:58@rubyquest.db
+SELECT * from quest where gold > experience; #09:28:13@rubyquest.db
+SELECT * from creature; #09:29:54@rubyquest.db
+SELECT * from creature where health < max_health; #09:30:16@rubyquest.db
+SELECT * from animal; #09:31:14@rubyquest.db
+SELECT * from animal p; #09:33:16@rubyquest.db
+SELECT * from animal ; #09:33:22@rubyquest.db
+SELECT * from animal where not type = "Sheep"; #09:34:03@rubyquest.db
+SELECT * from quest where experience > 3000; #09:34:48@rubyquest.db
+SELECT * from person where gold > 1800; #09:35:55@rubyquest.db
+SELECT * from person where gold < 1850; #09:36:30@rubyquest.db
+
+SELECT * from quest where gold > experience
+; #09:37:30@rubyquest.db
+SELECT * from person where gold >= 1300
+; #09:38:13@rubyquest.db
+SELECT * from weapon where price < 300
+; #09:38:38@rubyquest.db
+SELECT * from quest where gold > experience
+; #09:39:04@rubyquest.db
+SELECT * from creature where health < max_health
+; #09:39:40@rubyquest.db
+SELECT * from animal where not type = "Sheep"
+; #09:40:07@rubyquest.db
+SELECT * from person 
+; #09:44:26@rubyquest.db
+SELECT * from person order by name ASC
+; #09:44:38@rubyquest.db
+SELECT * from city 
+; #09:46:28@rubyquest.db
+SELECT * from city order by name DESC
+; #09:46:39@rubyquest.db
+SELECT * from person where id <= 10; #09:48:04@rubyquest.db
+SELECT * from weapon; #09:49:50@rubyquest.db
+SELECT count(5) from weapon ; #09:52:49@rubyquest.db
+SELECT * from weapon ; #09:53:22@rubyquest.db
+SELECT * from weapon order by price DESC limit 5; #09:54:08@rubyquest.db
+SELECT * from weapon order by price DESC ; #09:54:15@rubyquest.db
+SELECT * from weapon order by price DESC limit 5; #09:55:25@rubyquest.db
+SELECT * from weapon order by attack DESC limit 3; #09:55:31@rubyquest.db
+SELECT * from animal; #09:57:26@rubyquest.db
+SELECT * from animal order by type; #09:57:41@rubyquest.db
+SELECT count(*) from animal order by speed; #09:58:14@rubyquest.db
+SELECT * from animal order by speed; #09:58:21@rubyquest.db
+SELECT * from animal where type limit 1; #10:00:48@rubyquest.db
+SELECT * from animal where type limit 2; #10:01:00@rubyquest.db
+SELECT * from animal where type limit 2; #10:01:00@rubyquest.db
+SELECT * from animal where type limit 2; #10:01:01@rubyquest.db
+SELECT * from animal where type > 1 limit 1; #10:02:13@rubyquest.db
+SELECT * from animal where type > null limit 1; #10:02:21@rubyquest.db
+SELECT * from animal where type > null limit 1; #10:02:22@rubyquest.db
+SELECT * from animal where type > null limit 1; #10:02:22@rubyquest.db
+SELECT * from animal where type > null limit 1; #10:02:22@rubyquest.db
+SELECT * from animal ; #10:02:34@rubyquest.db
+SELECT * from npc; #10:04:54@rubyquest.db
+SELECT profession from npc; #10:05:04@rubyquest.db
+SELECT distinct type from animal; #10:08:04@rubyquest.db
+SELECT profession from npc; #10:10:11@rubyquest.db
