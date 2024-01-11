@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body>
+        <form id="form_profile">
+            <p>
+              <label>Leeftijd: </label>
+              <input type="text" name="input_leeftijd" id="input_leeftijd" required>
+            </p>
+        </form>
+        <h1>Dit is mijn header</h1>
+        <div>Hier staat nu wat tekst</div>
+        <div id="leeg" class="yellow">test</div>
+        <div id="buttons"><button id="hierbutton">Klik hier</button></div>
+        
+        <script> 
+        let x = 0;
+            function klikButtonActie(event){
+
+                x++;
+                console.log("You pressed the button");
+                console.log(x)
+
+                const currentYear = new Date().getFullYear(); // haalt huidige jaar op
+                const age = parseInt(input_leeftijd.value) || 0; // leeftijd van de gebruiker
+                const birthYear = currentYear - age;
+
+
+
+                // console.log(age)
+                // console.dir(input_leeftijd)
+                leeg.innerText =  `Je bent geboren in: ${birthYear}`;
+                leeg.className = 'green';
+                if (age < 18){
+                    leeg.className = 'red';
+                }
+                //dit is uitleg!!!
+                const y = 0
+                for (let x = 0; x < 3; x++){
+                    console.log(`x is gelijk aan ${x}`);
+                    y++;
+                    console.log(`y is gelijk aan ${y}`);
+                }
+                if (x == 10){
+                    leeg.innerText = "Dit is een andere text";
+                }
+            }
+            hierbutton.addEventListener('click',klikButtonActie);
+    
+        console.log("Hello world");
+        </script>
+    
+    </body>
+    </html>
+</body>
+</html>
