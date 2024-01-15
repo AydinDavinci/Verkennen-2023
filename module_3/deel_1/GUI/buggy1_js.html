@@ -5,7 +5,7 @@
   <title>Roebels</title>
 </head>
 <body>
-  Euro: <input type="number" step="0.01" id="input_euro" value="1.00"><br>
+  Euro: <input type="number" step="0.01" id="euro_input" value="1.00"><br>
 
   <button id="bereken">Bereken</button>
   <p>Roebels:</p>
@@ -17,8 +17,8 @@
 */
   const EURO_ROEBEL_KOERS = 109; // is koers = aantal roebels voor 1 euro
   function convertRoebels(event){
-    let eurosInput = euro_input.value; // regel bevat bug
-    let euros = number(eurosInput); // regel bevat bug
+    const eurosInput = euro_input.value; // regel bevat bug
+    const euros = Number(eurosInput); // regel bevat bug
     let roebels = euros * EURO_ROEBEL_KOERS;
     bedrag.textContent = roebels;
   }
