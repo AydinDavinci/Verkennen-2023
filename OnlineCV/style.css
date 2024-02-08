@@ -99,7 +99,7 @@ li a:hover{
     margin: auto;
     border-color: #c3073F;
     border-style: solid;
-    border-radius: 50px;
+    border-radius: 25px;
     padding-top: 20px;
     box-shadow: 0px 0px 10px #c3073F;
 
@@ -146,4 +146,31 @@ li a:hover{
 
 .readMore:hover {
     text-shadow: 0px 0px 10px white;
+}
+
+.hobbyCard {
+    margin-top: 20px;
+    margin-right: px;
+    height: 50%;
+    width: 30%;
+    border-color: #c3073F;
+    border-style: solid;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0px 0px 10px #c3073F;
+    display: inline-block;
+    padding: 50px;
+    color: #c3073F;;
+    text-shadow: 0px 0px 5px #c3073F;
+}
+
+.hobbyCard i {
+    font-size: 5em;
+}
+
+.hobbyCard p {
+    text-align: right;
+    display: inline;
+    color: white;
+    text-shadow: none;
 }
