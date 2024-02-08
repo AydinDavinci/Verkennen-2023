@@ -65,7 +65,7 @@ li a {
     color:#c3073F;
     font-size: 1.5em;
     padding-left: 20px;
-    text-shadow: 2px 2px 5px #c3073F;
+    text-shadow: 0px 0px 5px #c3073F;
     text-decoration: none;
 }
 
@@ -142,4 +142,8 @@ li a:hover{
         font-size: 16px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px #c3073F;
+}
+
+.readMore:hover {
+    text-shadow: 0px 0px 10px white;
 }
