@@ -3,8 +3,10 @@ inputTeams = document.getElementById('input-teams');
 game =
 {
     team1Punten: 0,
-    team2Punten: 1,
-    serving:0
+    team2Punten: 0,
+    serving:0,
+    lastServer: 0, //wie laatste server was
+    lastScore: 0 //wie scoorde een punt
 }
 
 inputTeam1.value = '...'; // testdata
@@ -18,6 +20,8 @@ function updateScreen() {
         counterTeam2.classList.add('serving');
         counterTeam1.classList.remove('serving');
     }
+    counterTeam1.innerText = game.team1Punten;
+    counterTeam2.innerText = game.team2Punten;
 }
 
 function start(event){
@@ -39,6 +43,8 @@ function start(event){
     if (servingTeam1.checked){
         game.serving = 1;
     };
+
+    undoButton.disabled = false;
    
     updateScreen();
     
@@ -46,17 +52,21 @@ function start(event){
 startButton.addEventListener('click',start);
 
 function count(event){
+
     console.log('je drukte op count')
     console.dir(this);
     if (this.id == 'counterTeam1'){
         game.team1Punten += 1;
         game.serving = 1;
+        game.lastScore = 1;
     }
     else{
         game.team2Punten += 1;
         game.serving = 2;
+        game.lastScore = 2;
         
     };
+    undoButton.disabled = false;
     updateScreen();
 }
 counterTeam1.addEventListener('click',count);
@@ -69,6 +79,12 @@ function displayNames(event){
 }
 inputTeam1.addEventListener('change',displayNames);
 inputTeam2.addEventListener('change',displayNames);
+
+
+function undoLastPoint(event){
+    undoButton.disabled = true;
+}
+undoButton.addEventListener("click" ,undoLastPoint)
 
 // annulleer 
 undoButton.disabled = true;
