@@ -90,7 +90,7 @@ li a:hover{
   }
 
   .flex-container > div {
-    color:#c3073F;
+    color:white;
     width: 300px;
     height: 300px;
     text-align: center;
@@ -150,7 +150,7 @@ li a:hover{
 
 .hobbyCard {
     height: 50%;
-    width: 40%;
+    width: 30%;
     border-color: #c3073F;
     border-style: solid;
     border-radius: 5px;
@@ -174,11 +174,17 @@ li a:hover{
     display: inline;
     color: white;
     text-shadow: none;
+    font-size: 12px;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .flex-hobby {
-    display: flex;
+    display: inline;
     width: 100%;
     margin: auto;
     flex-wrap: wrap;
   }
+.flex-hobby i{
+    font-size: 5em;
+  }
+

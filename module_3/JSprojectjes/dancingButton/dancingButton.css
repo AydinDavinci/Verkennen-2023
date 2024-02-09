@@ -1,0 +1,21 @@
+button{
+    border: none;
+    color: red;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+  }
+
+body{
+    max-height: 1000px;
+    width: auto;
+}
+
+.black{
+    background-color: black;
+}
+
+.red{
+    background-color: blue;
+}
