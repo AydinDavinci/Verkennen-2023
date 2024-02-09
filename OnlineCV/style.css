@@ -149,8 +149,6 @@ li a:hover{
 }
 
 .hobbyCard {
-    margin-top: 20px;
-    margin-right: px;
     height: 50%;
     width: 30%;
     border-color: #c3073F;
@@ -174,3 +172,9 @@ li a:hover{
     color: white;
     text-shadow: none;
 }
+
+.flex-hobby {
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
