@@ -1,0 +1,12 @@
+Tosti Go
+
+ontwerp fase:
+- naam restaurant
+- Layout
+- 3 Gerechten Tosti Ham/kaas, Tosti Shoarma, Tosti Mexico
+
+ontwikkel fase:
+- HTML inrichten
+	- Chat GPT
+wat moet er gebeuren?
+- 

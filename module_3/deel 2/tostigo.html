@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TostiGO</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .menu-item {
+            display: flex;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #f6b309;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .counter {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #totalCounter {
+            margin-top: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-item img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 8px;
+                margin-top: 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TostiGO</h1>
+
+    <div class="menu-item">
+        <img src="Sushi GO/Media/hamkaas.png" alt="Tosti Ham Kaas">
+        <div>
+            <h2>Tosti Ham Kaas</h2>
+            <p>Een klassieke tosti met ham en kaas.</p>
+            <button onclick="bestelTosti('tostiHamKaasCounter')">Voeg toe</button>
+            <button onclick="verwijder('tostiHamKaasCounter')">Verwijder</button>
+            <span class="counter" id="tostiHamKaasCounter">0</span>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="Sushi GO/Media/shoarmaTosti.png" alt="Tosti Shoarma">
+        <div>
+            <h2>Tosti Shoarma</h2>
+            <p>Een smakelijke tosti met shoarma vulling.</p>
+            <button onclick="bestelTosti('tostiShoarmaCounter')">Voeg toe</button>
+            <button onclick="verwijder('tostiShoarmaCounter')">Verwijder</button>
+            <span class="counter" id="tostiShoarmaCounter">0</span>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="Sushi GO/Media/mexicoTosti.png" alt="Tosti Mexico">
+        <div>
+            <h2>Tosti Mexico</h2>
+            <p>Een pittige tosti met Mexicaanse ingrediënten.</p>
+            <button onclick="bestelTosti('tostiMexicoCounter')">Voeg toe</button>
+            <button onclick="verwijder('tostiMexicoCounter')">Verwijder</button>
+            <span class="counter" id="tostiMexicoCounter">0</span>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="Sushi GO/Media/kroketTosti.png" alt="Tosti Tonijn">
+        <div>
+            <h2>Tosti Kroket</h2>
+            <p>Een heerlijke tosti met kroketvulling.</p>
+            <button onclick="bestelTosti('tostiTonijnCounter')">Voeg toe</button>
+            <button onclick="verwijder('tostiTonijnCounter')">Verwijder</button>
+            <span class="counter" id="tostiTonijnCounter">0</span>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="Sushi GO/Media/HawaiTosti.png" alt="Tosti Hawaii">
+        <div>
+            <h2>Tosti Hawaii</h2>
+            <p>Een tropische tosti met ham, kaas en ananas.</p>
+            <button onclick="bestelTosti('tostiHawaiiCounter')">Voeg toe</button>
+            <button onclick="verwijder('tostiHawaiiCounter')">Verwijder</button>
+            <span class="counter" id="tostiHawaiiCounter">0</span>
+        </div>
+    </div>
+
+    
+    <div id="totalCounter"><button onclick="bestelAlles()">Bestel Alles</button> Totaal items: <span class="counter" id="overallCounter">0</span>
+    </div>
+
+    
+    <script>
+        
+        var overallCounter = document.getElementById('overallCounter');
+        function bestelTosti(counterId) {
+            var counterElement = document.getElementById(counterId);
+            var currentCount = parseInt(counterElement.innerHTML);
+            counterElement.innerHTML = currentCount + 1;
+            var totalOrders = parseInt(overallCounter.innerHTML);
+            overallCounter.innerHTML = totalOrders + 1;
+        }
+    
+        function bestelAlles(counterID) {
+            // alert("De tosti's komen uw kant op! Eet smaakelijk!");
+            var i = 0;
+            var totalOrders = parseInt(overallCounter.innerHTML);
+            if (totalOrders > 12) {
+                alert('Sorry, u mag maar maximaal 12 items bestellen per keer!  ');
+                document.getElementsByClassName("counter").innerHTML = i;
+            }
+        }
+    
+        function verwijder(counterID) {
+            var counterElement = document.getElementById(counterID);
+            var currentCount = parseInt(counterElement.innerHTML);
+    
+            if (currentCount > 0) {
+                counterElement.innerHTML = currentCount - 1;
+                var totalOrders = parseInt(overallCounter.innerHTML);
+                overallCounter.innerHTML = totalOrders - 1;
+            }
+        }
+    </script>
+    
+    <footer>
+        <p>Made by <a href="https://aydindavinci.github.io" target="_blank">Aydin</a></p>
+      </footer>
+</body>
+</html>

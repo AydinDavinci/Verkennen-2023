@@ -2,8 +2,8 @@ inputTeams = document.getElementById('input-teams');
 
 game =
 {
-    team1Punten: 0,
-    team2Punten: 0,
+    team1Punten: 20,
+    team2Punten: 20,
     serving:0,
     lastServer: 0, //wie laatste server was
     lastScore: 0 //wie scoorde een punt
@@ -52,22 +52,39 @@ function start(event){
 startButton.addEventListener('click',start);
 
 function count(event){
+    const pointDifference = Math.abs(game.team1Punten - game.team2Punten + 1)
 
-    console.log('je drukte op count')
-    console.dir(this);
-    if (this.id == 'counterTeam1'){
-        game.team1Punten += 1;
-        game.serving = 1;
-        game.lastScore = 1;
+    if ((game.team1Punten > 25 && (pointDifference >= 2)) || (game.team2Punten > 25 && (pointDifference >= 2))) {
+        game.team1Punten = 0;
+        game.team2Punten = 0;
+        game.serving = 0;
+        game.lastServer = 0;
+        game.lastScore = 0;
+        console.log('ronde vorbij')
+        if (game.team1Punten > game.team2Punten){
+            alert(`${inputTeam2.value} wint!`)
+        }else {
+            alert(`${inputTeam1.value} wint!`)
+        }
+        updateScreen()
+    }else {
+        console.log('je drukte op count');
+        console.dir(this);
+        if (this.id == 'counterTeam1'){
+            game.team1Punten += 1;
+            game.serving = 1;
+            game.lastServer = 1;
+        // game.lastScore = 1;
+        }
+        else{
+            game.team2Punten += 1;
+            game.serving = 2;
+            game.lastServer = 2;
+        // game.lastScore = 2;
+        }
+        undoButton.disabled = false;
+        updateScreen();
     }
-    else{
-        game.team2Punten += 1;
-        game.serving = 2;
-        game.lastScore = 2;
-        
-    };
-    undoButton.disabled = false;
-    updateScreen();
 }
 counterTeam1.addEventListener('click',count);
 counterTeam2.addEventListener('click',count);
@@ -83,8 +100,19 @@ inputTeam2.addEventListener('change',displayNames);
 
 function undoLastPoint(event){
     undoButton.disabled = true;
+    if (game.lastServer == 1){
+        game.team1Punten -= 1;
+        game.serving = 1;
+        console.log('-1 team 1')
+    }
+    else{
+        game.team2Punten -= 1;
+        game.serving = 2;
+        console.log('-1 team 2')
+    }
+    updateScreen();
 }
-undoButton.addEventListener("click" ,undoLastPoint)
+undoButton.addEventListener("click" ,undoLastPoint)     
 
 // annulleer 
 undoButton.disabled = true;

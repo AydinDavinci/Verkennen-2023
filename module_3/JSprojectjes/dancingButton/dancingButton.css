@@ -1,4 +1,4 @@
-button{
+#pakButton{
     border: none;
     color: red;
     text-align: center;
@@ -10,12 +10,17 @@ button{
 body{
     max-height: 1000px;
     width: auto;
+    color: white;
 }
 
 .black{
     background-color: black;
 }
 
-.red{
+.blue{
     background-color: blue;
+}
+
+#counter {
+    color: red;
 }
