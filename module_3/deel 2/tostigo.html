@@ -66,11 +66,13 @@
             <span class="counter" id="tostiHawaiiCounter">0</span>
         </div>
     </div>
+    (u bestelt 1 halfje per item)
 
 
     <div id="totalCounter"><button onclick="bestelAlles()">Bestel Alles</button> Items voor deze ronde: <span class="counter"
             id="overallCounter">0</span>
     </div>
+
     <div id="totalCounter">Totaal besteld: <span id="grandTotalCounter">0</span></div>
 
 
@@ -89,12 +91,15 @@ function bestelAlles() {
     if (totalOrders > 12) {
         alert('Sorry, u mag maar maximaal 12 items bestellen per keer!');
         resetCounters();
+    } else if (totalOrders < 6) {
+        alert('Sorry, U moet minimaal 6 items bestellen per keer!');
     } else {
         alert("De tosti's komen uw kant op! Eet smakelijk!");
         updateGrandTotal();
         resetCounters();
-
     }
+
+
 }
 
 function verwijder(counterID) {
@@ -128,6 +133,10 @@ function updateGrandTotal() {
     var currentGrandTotal = parseInt(grandTotalCounter.innerHTML);
     grandTotalCounter.innerHTML = currentGrandTotal + parseInt(overallCounter.innerHTML);
 }
+
+
+
+
     </script>
 
     <footer>
