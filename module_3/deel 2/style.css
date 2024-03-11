@@ -24,8 +24,7 @@
             border-radius: 8px;
             object-fit: cover;
         }
-
-        button {
+        #bestelKnop {
             padding: 10px;
             font-size: 16px;
             cursor: pointer;
@@ -34,6 +33,27 @@
             border: none;
             border-radius: 4px;
         }
+        #knop {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #f6b309;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+
+        #knopDisabled {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: lightgrey;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: no-drop;
+        }
+
 
         .button:hover {
             background-color: #45a049;

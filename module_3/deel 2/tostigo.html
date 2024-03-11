@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TostiGO</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Sushi GO/Media/favicon.ico">
 </head>
 
 <body>
 
     <h1>TostiGO</h1>
-    <div id="Rondes"><h2>Aantal rondes te gaan: <span id="RondeCounter">6</span></h2></div>
+    <div id="Rondes"><h2>Aantal rondes te gaan: <span id="rondeCounter">6</span></h2></div>
     <div class="menu-item">
         <img src="Sushi GO/Media/hamkaas.png" alt="Tosti Ham Kaas">
         <div>
             <h2>Tosti Ham Kaas</h2>
             <p>Een klassieke tosti met ham en kaas.</p>
-            <button onclick="bestelTosti('tostiHamKaasCounter')">Voeg toe</button>
-            <button onclick="verwijder('tostiHamKaasCounter')">Verwijder</button>
+            <button onclick="bestelTosti('tostiHamKaasCounter')"id="knop">Voeg toe</button>
+            <button onclick="verwijder('tostiHamKaasCounter')" id="knop">Verwijder</button>
             <span class="counter" id="tostiHamKaasCounter">0</span>
         </div>
     </div>
@@ -28,8 +29,8 @@
         <div>
             <h2>Tosti Shoarma</h2>
             <p>Een smakelijke tosti met shoarma vulling.</p>
-            <button onclick="bestelTosti('tostiShoarmaCounter')">Voeg toe</button>
-            <button onclick="verwijder('tostiShoarmaCounter')">Verwijder</button>
+            <button onclick="bestelTosti('tostiShoarmaCounter')"id="knop">Voeg toe</button>
+            <button onclick="verwijder('tostiShoarmaCounter')"id="knop">Verwijder</button>
             <span class="counter" id="tostiShoarmaCounter">0</span>
         </div>
     </div>
@@ -39,8 +40,8 @@
         <div>
             <h2>Tosti Mexico</h2>
             <p>Een pittige tosti met Mexicaanse ingrediënten.</p>
-            <button onclick="bestelTosti('tostiMexicoCounter')">Voeg toe</button>
-            <button onclick="verwijder('tostiMexicoCounter')">Verwijder</button>
+            <button onclick="bestelTosti('tostiMexicoCounter')"id="knop">Voeg toe</button>
+            <button onclick="verwijder('tostiMexicoCounter')"id="knop">Verwijder</button>
             <span class="counter" id="tostiMexicoCounter">0</span>
         </div>
     </div>
@@ -50,8 +51,8 @@
         <div>
             <h2>Tosti Kroket</h2>
             <p>Een heerlijke tosti met kroketvulling.</p>
-            <button onclick="bestelTosti('tostiTonijnCounter')">Voeg toe</button>
-            <button onclick="verwijder('tostiTonijnCounter')">Verwijder</button>
+            <button onclick="bestelTosti('tostiTonijnCounter')"id="knop">Voeg toe</button>
+            <button onclick="verwijder('tostiTonijnCounter')"id="knop">Verwijder</button>
             <span class="counter" id="tostiTonijnCounter">0</span>
         </div>
     </div>
@@ -61,83 +62,22 @@
         <div>
             <h2>Tosti Hawaii</h2>
             <p>Een tropische tosti met ham, kaas en ananas.</p>
-            <button onclick="bestelTosti('tostiHawaiiCounter')">Voeg toe</button>
-            <button onclick="verwijder('tostiHawaiiCounter')">Verwijder</button>
+            <button onclick="bestelTosti('tostiHawaiiCounter')"id="knop">Voeg toe</button>
+            <button onclick="verwijder('tostiHawaiiCounter')"id="knop">Verwijder</button>
             <span class="counter" id="tostiHawaiiCounter">0</span>
         </div>
     </div>
     (u bestelt 1 halfje per item)
 
 
-    <div id="totalCounter"><button onclick="bestelAlles()">Bestel Alles</button> Items voor deze ronde: <span class="counter"
-            id="overallCounter">0</span>
+    <div id="totalCounter"><button onclick="bestelAlles()" id="bestelKnop" >Bestel Alles</button> Items voor deze ronde: <span class="counter"
+            id="overallCounter">0</span>/12
     </div>
 
-    <div id="totalCounter">Totaal besteld: <span id="grandTotalCounter">0</span></div>
+    <div id="totalCounter">Totaal besteld: <span id="grandTotalCounter">0</span>/60</div>
 
 
-    <script>
-
-var overallCounter = document.getElementById('overallCounter');
-var grandTotalCounter = document.getElementById('grandTotalCounter');
-
-function bestelTosti(counterId) {
-    updateCounter(counterId, 1);
-}
-
-function bestelAlles() {
-    var totalOrders = parseInt(overallCounter.innerHTML);
-
-    if (totalOrders > 12) {
-        alert('Sorry, u mag maar maximaal 12 items bestellen per keer!');
-        resetCounters();
-    } else if (totalOrders < 6) {
-        alert('Sorry, U moet minimaal 6 items bestellen per keer!');
-    } else {
-        alert("De tosti's komen uw kant op! Eet smakelijk!");
-        updateGrandTotal();
-        resetCounters();
-    }
-
-
-}
-
-function verwijder(counterID) {
-    var counterElement = document.getElementById(counterID);
-    var currentCount = parseInt(counterElement.innerHTML);
-
-    if (currentCount > 0) {
-        updateCounter(counterID, -1);
-    }
-}
-
-function updateCounter(counterId, value) {
-    var counterElement = document.getElementById(counterId);
-    var currentCount = parseInt(counterElement.innerHTML);
-    var newCount = Math.max(currentCount + value, 0); // Ensure count doesn't go below zero
-    counterElement.innerHTML = newCount;
-
-    var totalOrders = parseInt(overallCounter.innerHTML);
-    overallCounter.innerHTML = totalOrders + value;
-}
-
-function resetCounters() {
-    var counterElements = document.getElementsByClassName("counter");
-    for (var i = 0; i < counterElements.length; i++) {
-        counterElements[i].innerHTML = '0';
-    }
-    overallCounter.innerHTML = '0';
-}
-
-function updateGrandTotal() {
-    var currentGrandTotal = parseInt(grandTotalCounter.innerHTML);
-    grandTotalCounter.innerHTML = currentGrandTotal + parseInt(overallCounter.innerHTML);
-}
-
-
-
-
-    </script>
+    <script src="tostigo.js"></script>
 
     <footer>
         <p>Made by <a href="https://aydindavinci.github.io" target="_blank">Aydin</a></p>

@@ -34,7 +34,7 @@ function start(event){
     if(nameTeam1.innerText == "..." || nameTeam2.innerText == "..."){
         alert("er mist een naam");
         return;
-    };
+    };0.
     if (!servingTeam1.checked && !servingTeam2.checked){
         alert("wie moet er beginnen")
         return;
