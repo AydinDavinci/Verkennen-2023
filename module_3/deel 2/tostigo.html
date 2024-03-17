@@ -77,7 +77,73 @@
     <div id="totalCounter">Totaal besteld: <span id="grandTotalCounter">0</span>/60</div>
 
 
+<<<<<<< HEAD
     <script src="tostigo.js"></script>
+=======
+    <script>
+
+var overallCounter = document.getElementById('overallCounter');
+var grandTotalCounter = document.getElementById('grandTotalCounter');
+
+function bestelTosti(counterId) {
+    updateCounter(counterId, 1);
+}
+
+
+function bestelAlles() {
+    var totalOrders = parseInt(overallCounter.innerHTML);
+
+    if (totalOrders > 12) {
+        alert('Sorry, u mag maar maximaal 12 items bestellen per keer!');
+        resetCounters();
+    } else if (totalOrders < 6) {
+        alert('Sorry, U moet minimaal 6 items bestellen per keer!');
+    } else {
+        alert("De tosti's komen uw kant op! Eet smakelijk!");
+        updateGrandTotal();
+        resetCounters();
+    }
+
+
+}
+
+function verwijder(counterID) {
+    var counterElement = document.getElementById(counterID);
+    var currentCount = parseInt(counterElement.innerHTML);
+
+    if (currentCount > 0) {
+        updateCounter(counterID, -1);
+    }
+}
+
+function updateCounter(counterId, value) {
+    var counterElement = document.getElementById(counterId);
+    var currentCount = parseInt(counterElement.innerHTML);
+    var newCount = Math.max(currentCount + value, 0); // Ensure count doesn't go below zero
+    counterElement.innerHTML = newCount;
+
+    var totalOrders = parseInt(overallCounter.innerHTML);
+    overallCounter.innerHTML = totalOrders + value;
+}
+
+function resetCounters() {
+    var counterElements = document.getElementsByClassName("counter");
+    for (var i = 0; i < counterElements.length; i++) {
+        counterElements[i].innerHTML = '0';
+    }
+    overallCounter.innerHTML = '0';
+}
+
+function updateGrandTotal() {
+    var currentGrandTotal = parseInt(grandTotalCounter.innerHTML);
+    grandTotalCounter.innerHTML = currentGrandTotal + parseInt(overallCounter.innerHTML);
+}
+
+
+
+
+    </script>
+>>>>>>> 0d5b2504a8cbb2a58be3333957989b1df314d09d
 
     <footer>
         <p>Made by <a href="https://aydindavinci.github.io" target="_blank">Aydin</a></p>
