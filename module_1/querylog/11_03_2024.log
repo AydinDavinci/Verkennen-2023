@@ -1,0 +1,6 @@
+select * from armor; #13:25:01@rubyquest.db
+select * from CITY where id = 12; #13:36:57@rubyquest.db
+select * from CITY where id = 12; #13:37:15@rubyquest.db
+select * from hero; #13:44:26@rubyquest.db
+select * from creature; #13:44:44@rubyquest.db
+select * from npc; #13:45:12@rubyquest.db

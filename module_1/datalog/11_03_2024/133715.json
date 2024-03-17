@@ -1,0 +1,11 @@
+{
+    "query": "select * from CITY where id = 12",
+    "resultcount": 1,
+    "result": [
+        {
+            "id": 12,
+            "name": "Charcol",
+            "region": 5
+        }
+    ]
+}
