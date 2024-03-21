@@ -1,5 +1,5 @@
 inputTeams = document.getElementById('input-teams');
-
+let timer_score = true;
 game =
 {
     team1Punten: 20,
@@ -50,14 +50,13 @@ function start(event){
     };
 
     undoButton.disabled = false;
-
-   
     updateScreen();
     
 };
 startButton.addEventListener('click',start);
 
 function count(event){
+    if (document.body.classList.contains('waiting')) return;
     const pointDifference = Math.abs(game.team1Punten - game.team2Punten);
     if ((game.team1Punten > 24 && (pointDifference >= 2)) || (game.team2Punten > 24 && (pointDifference >= 2))) {
 
@@ -74,29 +73,43 @@ function count(event){
         }else {
             alert(`${inputTeam1.value} #1 victory royale`)
             game.teamtel2 += 1;
+
         }
         updateScreen();
+
     } else {
         console.log('je drukte op count')
         console.dir(this);
         if (this.id == 'counterTeam1'){
             game.team1Punten += 1;
             game.serving = 1;
+
         }
         else{
             game.team2Punten += 1;
             game.serving = 2;
+
             
         }
         game.lastserve = game.serving;
         console.log('Last Serve:', game.lastserve);
-
         undoButton.disabled = false;
         updateScreen();
     }
+    document.body.classList.add('waiting');
+    setTimeout(() => {
+        document.body.classList.remove('waiting');
+    }, 1500);
+    document.body.classList.add('waiting');
+    setTimeout(() => {
+        document.body.classList.remove('waiting');
+    }, 1500);
+
 }
+
 counterTeam1.addEventListener('click',count);
 counterTeam2.addEventListener('click',count);
+
 
 function displayNames(event){
     nameTeam1.innerText = inputTeam1.value;
@@ -126,3 +139,4 @@ undoButton.addEventListener("click" ,undoLastPoint)
 undoButton.disabled = true;
 counterTeam1.disabled = true;
 counterTeam2.disabled = true;
+
