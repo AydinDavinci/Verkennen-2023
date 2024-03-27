@@ -9,6 +9,12 @@ body {
   background-color: palegoldenrod;
 }
 
+#tijd {
+  color: red;
+  font-size: 2em;
+  margin: auto;
+  text-align: center;
+}
 .team {
   display: inline-block;
   width: 49%;

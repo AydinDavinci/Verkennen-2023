@@ -51,6 +51,7 @@ function start(event){
 
     undoButton.disabled = false;
     updateScreen();
+    setInterval(updateTeller, 1000);
     
 };
 startButton.addEventListener('click',start);
@@ -68,10 +69,10 @@ function count(event){
         game.lastscore = 0;
         console.log("round done");
         if (game.team1Punten > game.team2Punten){
-            alert(`${inputTeam2.value} #1 victory royale`)
+            alert(`${inputTeam2.value} #1 victory royale`);
             game.teamtel1 += 1;
         }else {
-            alert(`${inputTeam1.value} #1 victory royale`)
+            alert(`${inputTeam1.value} #1 victory royale`);
             game.teamtel2 += 1;
 
         }
@@ -140,3 +141,13 @@ undoButton.disabled = true;
 counterTeam1.disabled = true;
 counterTeam2.disabled = true;
 
+let teller = 0
+function updateTeller(){
+    teller ++;
+    minutes = Math.floor(teller / 60);
+    seconds = teller - minutes * 60;
+    tijd.innerText = `${minutes}:${seconds}`;
+}
+
+
+start.addEventListener('click' , updateTeller)

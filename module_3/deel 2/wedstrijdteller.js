@@ -69,10 +69,10 @@ function count(event){
         game.lastscore = 0;
         console.log("round done");
         if (game.team1Punten > game.team2Punten){
-            alert(`${inputTeam2.value} #1 victory royale`)
+            alert(`${inputTeam2.value} #1 victory royale`);
             game.teamtel1 += 1;
         }else {
-            alert(`${inputTeam1.value} #1 victory royale`)
+            alert(`${inputTeam1.value} #1 victory royale`);
             game.teamtel2 += 1;
         }
         updateScreen();
