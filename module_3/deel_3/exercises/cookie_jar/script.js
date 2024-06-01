@@ -25,33 +25,28 @@ function create_button(SoortKnop){
 }
 
 function proccess_takecookie_click(){ 
-    let jar; //vul deze variable met het element cookie-jar
-    console.log('test')
+    let jar = document.getElementById('cookie-jar');
+    jar.removeChild(jar.firstChild);
+
+
+    console.log('test');
+    // als er een cookie gepakt is moet je hier de bovenste verwijderen
+    
     // maak een if statement die kijkt hoeveel cookies er nog zijn
+
     // bij 1 cookie wordt de vraag gesteld: 'Weet u het zeker om de laatste te pakken?'
     // bij 0 wordt de melding gegeven: 'Geen cookies meer' 
 
-    // als er een cookie gepakt is moet je hier de bovenste verwijderen
+
 }
 
 function proccess_addcookies_click() {
-    let jar; //vul deze variable met het element cookie-jar
+let jar = document.getElementById('cookie-jar'); //vul deze variable met het element cookie-jar
     let currentcookies; // vul deze variablelen met het huidige aantal cookies in de jar 
-    console.log('test')
-    let repeat = true;
-    while (repeat){
-        // vraag hoeveel cookies iemand wil toevoegen
-        
-        // reken uit hoeveel cookies het totaal zou worden
 
-        repeat; // vul deze variablen met een boolean die true is als het aantal gevraagde cookies + aantal toegevoegde cookies groter is dan 7
-
-        if (repeat) {
-            // geef hier het bericht naar de gebruiker aan wat het maximale aantal cookies is dat ingevuld mocht worden.
-        }
-    }
-
-    // creeer het aantal gevraagde cookies met een for loop, let wel op dat je deze steeds bovenop plaatst
+    cookie = create_cookie()
+    jar.appendChild(cookie);
+    return
 }
 
 function proccess_placelit_click() {
