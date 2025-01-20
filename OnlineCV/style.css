@@ -21,7 +21,7 @@ h1 {
     border-style: solid;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #c3073F;
-
+    background-color: rgba(0, 0, 0, 0.386);
 }
 
 #banner {
